@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'search',
+    'pages',
 
     # "django_browser_reload",
 ]
