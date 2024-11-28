@@ -204,13 +204,6 @@
         "image": "static/images/album covers/yours_until_the_war_is_over.jpg"
     },
     {
-        "album_name": "Teens of Denial",
-        "artist_name": "Car Seat Headrest",
-        "genre": "Indie",
-        "release_year": 2016,
-        "image": "static/images/album covers/teens_of_denial.jpg"
-    },
-    {
         "album_name": "The Marshall Mathers LP",
         "artist_name": "Eminem",
         "genre": "Rap",

@@ -1,10 +1,12 @@
-from django.urls import path
-from . import views
-
-app_name = 'products'
+from django.urls import path, include
 
 urlpatterns = [
-    path('products/', views.prod_list, name = 'all_products'),
-    path('<uuid:genre_id>/', views.prod_list, name = 'products_by_genre'),
-    path('<uuid:genre_id>/<uuid:product_id>/', views.product_detail, name = 'product_detail'),
-    ]
+    #path('', include('pages.urls')), 
+    path('admin/', admin.site.urls),
+    # path("__reload__/", include("django_browser_reload.urls")),
+    #path('accounts/', include('django.contrib.auth.urls')),
+    #path('accounts/', include('accounts.urls')),
+    #path('', include('pages.urls')),
+    path('products/', include('products.urls')),  
+    path('search/', include('search.urls')),
+]
