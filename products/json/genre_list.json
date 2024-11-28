@@ -1,0 +1,22 @@
+[
+    {
+        "genre_name": "Rock",
+        "image": "static/images/site/rock.jpg"
+    },
+    {
+        "genre_name": "Metal",
+        "image": "static/images/site/metal.jpg"
+    },
+    {
+        "genre_name": "Indie",
+        "image": "static/images/site/indie.jpg"
+    },
+    {
+        "genre_name": "Rap",
+        "image": "static/images/site/rap.jpg"
+    },
+    {
+        "genre_name": "Pop",
+        "image": "static/images/site/pop.jpg"
+    }
+]

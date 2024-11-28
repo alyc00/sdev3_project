@@ -9,7 +9,6 @@ class Genre(models.Model):
         default=uuid.uuid4,
         editable=False)
     genre_name = models.CharField(max_length=256, unique=True, blank=False)
-    description = models.TextField(max_length=2048, blank=True)
     image = models.ImageField(upload_to = 'genre', blank=True)
 
 
