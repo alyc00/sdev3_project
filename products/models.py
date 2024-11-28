@@ -24,7 +24,7 @@ class Genre(models.Model):
 
     def __str__(self):
         return self.genre_name
-    
+
 
 class Product(models.Model):
     id = models.UUIDField(
@@ -53,7 +53,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.album_name
-    
+
     def get_artist(self):
         return self.artist_name
 

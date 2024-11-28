@@ -1,63 +1,63 @@
 [
     {
         "album_name": "American Idiot",
-        "artist": "Green Day",
+        "artist_name": "Green Day",
         "genre": "Rock",
         "release_year": 2004,
         "image": "static/images/album covers/american_idiot.jpg"
     },
     {
         "album_name": "Nevermind",
-        "artist": "Nirvana",
+        "artist_name": "Nirvana",
         "genre": "Rock",
         "release_year": 1991,
         "image": "static/images/album covers/nevermind.jpg"
     },
     {
         "album_name": "The Black Parade",
-        "artist": "My Chemical Romance",
-        "genre": "Rock",
+        "artist_name": "My Chemical Romance",
+        "genre": "Rock", 
         "release_year": 2006,
         "image": "static/images/album covers/the_black_parade.jpg"
     },
     {
         "album_name": "Infinity on High",
-        "artist": "Fall Out Boy",
+        "artist_name": "Fall Out Boy",
         "genre": "Rock",
         "release_year": 2007,
         "image": "static/images/album covers/infinity_on_high.jpg"
     },
     {
         "album_name": "Transgender Dysphoria Blues",
-        "artist": "Against Me!",
+        "artist_name": "Against Me!",
         "genre": "Rock",
         "release_year": 2014,
         "image": "static/images/album covers/transgender_dysphoria_blues.jpg"
     },
     {
         "album_name": "Hybrid Theory",
-        "artist": "Linkin Park",
+        "artist_name": "Linkin Park",
         "genre": "Rock",
         "release_year": 2000,
         "image": "static/images/album covers/hybrid_theory.jpg"
     },
     {
         "album_name": "Around the Fur",
-        "artist": "Deftones",
+        "artist_name": "Deftones",
         "genre": "Rock",
         "release_year": 1997,
         "image": "static/images/album covers/around_the_fur.jpg"
     },
     {
         "album_name": "Mellon Collie and the Infinite Sadness",
-        "artist": "The Smashing Pumpkins",
+        "artist_name": "The Smashing Pumpkins",
         "genre": "Rock",
         "release_year": 1995,
         "image": "static/images/album covers/mellon_collie_and_the_infinite_sadness.jpg"
     },
     {
         "album_name": "Black Holes and Revelations",
-        "artist": "Muse",
+        "artist_name": "Muse",
         "genre": "Rock",
         "release_year": 2006,
         "image": "static/images/album covers/black_holes_and_revelations.jpg"
@@ -65,287 +65,280 @@
 
     {
         "album_name": "AM",
-        "artist": "Arctic Monkeys",
+        "artist_name": "Arctic Monkeys",
         "genre": "Rock",
         "release_year": 2013,
         "image": "static/images/album covers/am.jpg"
     },
     {
         "album_name": "Vol. 3: The Subliminal Verses",
-        "artist": "Slipknot",
+        "artist_name": "Slipknot",
         "genre": "Metal",
         "release_year": 2004,
         "image": "static/images/album covers/vol3_the_subliminal_verses.jpg"
     },
     {
         "album_name": "You Won't Go Before You're Supposed To",
-        "artist": "Knocked Loose",
+        "artist_name": "Knocked Loose",
         "genre": "Metal",
         "release_year": 2024,
         "image": "static/images/album covers/you_wont_go_before_youre_supposed_to.jpg"
     },
     {
         "album_name": "Pain Remains",
-        "artist": "Lorna Shore",
+        "artist_name": "Lorna Shore",
         "genre": "Metal",
         "release_year": 2022,
         "image": "static/images/album covers/pain_remains.jpg"
     },
     {
         "album_name": "Repentless",
-        "artist": "Slayer",
+        "artist_name": "Slayer",
         "genre": "Metal",
         "release_year": 2015,
         "image": "static/images/album covers/repentless.jpg"
     },
     {
         "album_name": "The Death of Me",
-        "artist": "Polaris",
+        "artist_name": "Polaris",
         "genre": "Metal",
         "release_year": 2020,
         "image": "static/images/album covers/the_death_of_me.jpg"
     },
     {
         "album_name": "Nija",
-        "artist": "Orbit Culture",
+        "artist_name": "Orbit Culture",
         "genre": "Metal",
         "release_year": 2020,
         "image": "static/images/album covers/nija.jpg"
     },
     {
         "album_name": "Toxicity",
-        "artist": "System of a Down",
+        "artist_name": "System of a Down",
         "genre": "Metal",
         "release_year": 2001,
         "image": "static/images/album covers/toxicity.jpg"
     },
     {
         "album_name": "Golden Liar",
-        "artist": "Zeal & Ardor",
+        "artist_name": "Zeal & Ardor",
         "genre": "Metal",
         "release_year": 2021,
         "image": "static/images/album covers/golden_liar.jpg"
     },
     {
         "album_name": "Liebe Ist Fur Alle Da",
-        "artist": "Rammstein",
+        "artist_name": "Rammstein",
         "genre": "Metal",
         "release_year": 2009,
         "image": "static/images/album covers/liebe_ist_fur_alle_da.jpg"
     },
     {
         "album_name": "Metallica",
-        "artist": "Metallica",
+        "artist_name": "Metallica",
         "genre": "Metal",
         "release_year": 1991,
         "image": "static/images/album covers/metallica.jpg"
     },
     {
         "album_name": "How to: Friend, Love, Freefall",
-        "artist": "Rainbow Kitten Surprise",
+        "artist_name": "Rainbow Kitten Surprise",
         "genre": "Indie",
         "release_year": 2018,
         "image": "static/images/album covers/how_to_friend_love_freefall.jpg"
     },
     {
         "album_name": "Cleopatra",
-        "artist": "The Lumineers",
+        "artist_name": "The Lumineers",
         "genre": "Indie",
         "release_year": 2016,
         "image": "static/images/album covers/cleopatra.jpg"
     },
     {
         "album_name": "Talon of the Hawk",
-        "artist": "The Front Bottoms",
+        "artist_name": "The Front Bottoms",
         "genre": "Indie",
         "release_year": 2013,
         "image": "static/images/album covers/talon_of_the_hawk.jpg"
     },
     {
         "album_name": "Somewhere at the Bottom of the River Between Vega and Altair",
-        "artist": "La Dispute",
+        "artist_name": "La Dispute",
         "genre": "Indie",
         "release_year": 2018,
         "image": "static/images/album covers/somewhere_at_the_bottom_of_the_river_between_vega_and_altair.jpg"
     },
     {
         "album_name": "Everything So Far",
-        "artist": "Pinegrove",
+        "artist_name": "Pinegrove",
         "genre": "Indie",
         "release_year": 2015,
         "image": "static/images/album covers/everything_so_far.jpg"
     },
     {
         "album_name": "Farewell Griffen",
-        "artist": "Ezra Bell",
+        "artist_name": "Ezra Bell",
         "genre": "Indie",
         "release_year": 2017,
         "image": "static/images/album covers/farefell_griffen.jpg"
     },
     {
         "album_name": "Beware of the Maniacs",
-        "artist": "The Dodos",
+        "artist_name": "The Dodos",
         "genre": "Indie",
         "release_year": 2007,
         "image": "static/images/album covers/beware_of_the_maniacs.jpg"
     },
     {
         "album_name": "A Constant State of Ohio",
-        "artist": "Lincoln",
+        "artist_name": "Lincoln",
         "genre": "Indie",
         "release_year": 2017,
         "image": "static/images/album covers/a_constant_state_of_ohio.jpg"
     },
     {
         "album_name": "Yours Until the War is Over",
-        "artist": "Amigo the Devil",
+        "artist_name": "Amigo the Devil",
         "genre": "Indie",
         "release_year": 2024,
         "image": "static/images/album covers/yours_until_the_war_is_over.jpg"
     },
     {
-        "album_name": "People Who Eat People are the Luckiest People in the World",
-        "artist": "AJJ",
-        "genre": "Indie",
-        "release_year": 2007,
-        "image": "static/images/album covers/people_who_eat_people_are_the_luckiest_people_in_the_world.jpg"
-    },
-    {
         "album_name": "The Marshall Mathers LP",
-        "artist": "Eminem",
+        "artist_name": "Eminem",
         "genre": "Rap",
         "release_year": 2000,
         "image": "static/images/album covers/the_marshall_mathers_lp.jpg"
     },
     {
         "album_name": "17",
-        "artist": "XXXTENTACION",
+        "artist_name": "XXXTENTACION",
         "genre": "Rap",
         "release_year": 2017,
         "image": "static/images/album covers/17.jpg"
     },
     {
         "album_name": "Come Over When You're Sober, Pt.2",
-        "artist": "Lil Peep",
+        "artist_name": "Lil Peep",
         "genre": "Rap",
         "release_year": 2018,
         "image": "static/images/album covers/come_over_when_youre_sober_pt2.jpg"
     },
     {
         "album_name": "MM..FOOD",
-        "artist": "MF DOOM",
+        "artist_name": "MF DOOM",
         "genre": "Rap",
         "release_year": 2004,
         "image": "static/images/album covers/mm_food.jpg"
     },
     {
         "album_name": "My Liver Will Handle What My Heart Can't",
-        "artist": "$uicideboy$",
+        "artist_name": "$uicideboy$",
         "genre": "Rap",
         "release_year": 2015,
         "image": "static/images/album covers/my_liver_will_handle_what_my_heart_cant.jpg"
     },
     {
         "album_name": "UNRENDERED",
-        "artist": "BONES",
+        "artist_name": "BONES",
         "genre": "Rap",
         "release_year": 2017,
         "image": "static/images/album covers/unrendered.jpg"
     },
     {
         "album_name": "Hollywood's Bleeding",
-        "artist": "Post Malone",
+        "artist_name": "Post Malone",
         "genre": "Rap",
         "release_year": 2019,
         "image": "static/images/album covers/hollywoods_bleeding.jpg"
     },
     {
         "album_name": "GEMINI",
-        "artist": "Macklemore",
+        "artist_name": "Macklemore",
         "genre": "Rap",
         "release_year": 2017,
         "image": "static/images/album covers/gemini.jpg"
     },
     {
         "album_name": "All Eyez On Me",
-        "artist": "2Pac",
+        "artist_name": "2Pac",
         "genre": "Rap",
         "release_year": 1996,
         "image": "static/images/album covers/all_eyez_on_me.jpg"
     },
     {
         "album_name": "Give It to Me",
-        "artist": "The Northern Boys",
+        "artist_name": "The Northern Boys",
         "genre": "Rap",
         "release_year": 2023,
         "image": "static/images/album covers/give_it_to_me.jpg"
     },
     {
         "album_name": "One of the Boys",
-        "artist": "Katy Perry",
+        "artist_name": "Katy Perry",
         "genre": "Pop",
         "release_year": 2008,
         "image": "static/images/album covers/one_of_the_boys.jpg"
     },
     {
         "album_name": "Animal",
-        "artist": "Kesha",
+        "artist_name": "Kesha",
         "genre": "Pop",
         "release_year": 2010,
         "image": "static/images/album covers/animal.jpg"
     },
     {
         "album_name": "Circus",
-        "artist": "Britney Spears",
+        "artist_name": "Britney Spears",
         "genre": "Pop",
         "release_year": 2008,
         "image": "static/images/album covers/circus.jpg"
     },
     {
         "album_name": "Evacuate the Dancefloor",
-        "artist": "Cascada",
+        "artist_name": "Cascada",
         "genre": "Pop",
         "release_year": 2009,
         "image": "static/images/album covers/evacuate_the_dancefloor.jpg"
     },
     {
         "album_name": "Loud",
-        "artist": "Rihanna",
+        "artist_name": "Rihanna",
         "genre": "Pop",
         "release_year": 2010,
         "image": "static/images/album covers/loud.jpg"
     },
     {
         "album_name": "The Fame Monster",
-        "artist": "Lady Gaga",
+        "artist_name": "Lady Gaga",
         "genre": "Pop",
         "release_year": 2009,
         "image": "static/images/album covers/the_fame_monster.jpg"
     },
     {
         "album_name": "Funhouse",
-        "artist": "P!nk",
+        "artist_name": "P!nk",
         "genre": "Pop",
         "release_year": 2008,
         "image": "static/images/album covers/funhouse.jpg"
     },
     {
         "album_name": "Dangerous Woman",
-        "artist": "Ariana Grande",
+        "artist_name": "Ariana Grande",
         "genre": "Pop",
         "release_year": 2016,
         "image": "static/images/album covers/dangerous_woman.jpg"
     },
     {
         "album_name": "folklore",
-        "artist": "Taylor Swift",
+        "artist_name": "Taylor Swift",
         "genre": "Pop",
         "release_year": 2020,
         "image": "static/images/album covers/folklore.jpg"
     },
     {
         "album_name": "21",
-        "artist": "Adele",
+        "artist_name": "Adele",
         "genre": "Pop",
         "release_year": 2011,
         "image": "static/images/album covers/21.jpg"
