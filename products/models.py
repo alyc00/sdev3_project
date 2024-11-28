@@ -14,7 +14,7 @@ class Genre(models.Model):
 
 
     class Meta:
-        ordering = ('name',)
+        #ordering = ('name',)
         verbose_name = 'genre'
         verbose_name_plural = 'genres'
 
@@ -35,7 +35,7 @@ class Product(models.Model):
     artist_name = models.CharField(max_length=256, unique=True, blank=False)   
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     image = models.ImageField(upload_to = 'product', blank=True)
-    release_year = models.IntegerField(max_digits=16, blank=False)
+    release_year = models.IntegerField(blank=False)
     price = models.DecimalField(max_digits=16, decimal_places=2, blank=False)
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
@@ -43,7 +43,7 @@ class Product(models.Model):
 
 
     class Meta:
-        ordering = ('name',)
+        #ordering = ('name',)
         verbose_name = 'product'
         verbose_name_plural = 'products'
 
