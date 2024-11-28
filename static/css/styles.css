@@ -1,4 +1,24 @@
+/* static/css/styles.css */
+
 errorlist li {
     color: red;
     font-weight: bold;
-    }
+}
+
+.background_body {
+    background-color: #f0ebd8; /* Light gray-blue */
+}
+
+nav {
+    background-color: #1d2d44 !important; /* Light blue */
+}
+footer {
+    background-color: #1d2d44 !important; /* Light blue */
+}
+body h1 h2 p{
+    color: #0d1321
+}
+
+nav-item{
+    color: white
+}

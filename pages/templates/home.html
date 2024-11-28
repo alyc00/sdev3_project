@@ -1,10 +1,57 @@
 {% extends 'base.html' %}
 
-{% block title %}
-Home - My Website
-{% endblock %}
+{% block title %}Home - Music Store{% endblock %}
 
 {% block content %}
-<h1>CA2 Start</h1>
-<p> lets start here<p>
+<div class="container mt-5 background_body">
+    <div class="row align-items-center">
+        <!-- Left Section: Introduction -->
+        <div class="col-md-6">
+            <h1 class="display-4">Welcome to Music Store</h1>
+            <p class="lead">
+                Discover your favorite artists, albums, and tracks. From timeless classics to the latest hits, we’ve got something for every music lover.
+            </p>
+            <a href="/shop" class="btn btn-lg" style="background-color: #3e5c76; color: white;">Shop Now</a>
+        </div>
+
+        <!-- Right Section: Image -->
+        {% comment %}
+        <div class="col-md-6">
+            <img src="{% static 'images/home-hero.jpg' %}" class="img-fluid rounded shadow-lg" alt="Music Store">
+        </div>
+        {% endcomment %}
+    </div>
+
+    <!-- Features Section -->
+    <div class="row text-center mt-5">
+        <h2 class="mb-4">Why Choose Us?</h2>
+        <div class="col-md-4">
+            <i class="fas fa-record-vinyl fa-3x" style="color: #3e5c76;"></i>
+            <h5 style="color: #1f2937;">Vast Collection</h5>
+            <p style="color: #6b7280;">From vinyl records to digital albums, explore a world of music at your fingertips.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-headphones fa-3x" style="color: #3e5c76;"></i>
+            <h5 style="color: #1f2937;">High-Quality Sound</h5>
+            <p style="color: #6b7280;">Experience premium sound quality for all your favorite tracks.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-shipping-fast fa-3x" style="color: #3e5c76;"></i>
+            <h5 style="color: #1f2937;">Fast Delivery</h5>
+            <p style="color: #6b7280;">Get your music delivered quickly and securely.</p>
+        </div>
+    </div>
+
+    <!-- Call-to-Action Section -->
+    <div class="row mt-5">
+        <div class="col text-center">
+            <h2>Experience Music Like Never Before</h2>
+            <p class="lead" style="color: #6b7280;">
+                Browse our exclusive collection of records and albums to find the perfect soundtrack for your life.
+            </p>
+            <a href="/shop" class="btn btn-lg" style="background-color: #3e5c76; color: white;">Browse the Shop</a>
+        </div>
+    </div>
+</div>
+<br><br><br>
 {% endblock %}

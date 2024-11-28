@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Password Reset Complete
+{% endblock title %}
+
+{% block content %}
+<div id="pass-reset-complete" class="text-center">
+    <h1 class="my_title my-5">Password reset complete</h1>
+    <p>Your new password has been set. You can now log back in.</p>
+
+    <a href="{% url 'login' %}">
+        <button class="btn btn-success mb-5">Login Account</button>
+    </a>
+</div>
+{% endblock content %}
