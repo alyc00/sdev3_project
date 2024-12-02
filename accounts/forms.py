@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
-from .models import CustomUser
+from .models import CustomUser, Profile
 from django.contrib.auth.models import Group
 
 class CustomUserCreationForm(UserCreationForm):
@@ -36,3 +36,8 @@ class CustomUserChangeForm(UserChangeForm):
 #     class Meta:
 #         model = CustomUser
 #         fields = UserChangeForm.Meta.fields 
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['date_of_birth', 'fav_artist', 'fav_album', 'fav_genre']
