@@ -1,24 +1,103 @@
-/* static/css/styles.css */
+/* Navbar background and text */
+.navbar {
+    background-color: #1d2d44;
+    border-bottom: 2px solid #ffcc00;
+}
 
-errorlist li {
-    color: red;
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffcc00 !important;
+}
+
+/* Dropdown menu */
+.my_menu {
+    font-size: 1rem;
     font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff !important;
 }
 
-.background_body {
-    background-color: #f0ebd8; /* Light gray-blue */
+.my_menu_dropdown {
+    background-color: #1d2d44;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav {
-    background-color: #1d2d44 !important; /* Light blue */
-}
-footer {
-    background-color: #1d2d44 !important; /* Light blue */
-}
-body h1 h2 p{
-    color: #0d1321
+.my_menu_item {
+    color: #ffffff;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-nav-item{
-    color: white
+.my_menu_item:hover {
+    background-color: #ffcc00;
+    color: #1d2d44;
+}
+
+/* Dropdown arrow */
+.my_menu_dropdown::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #1d2d44 transparent;
+}
+
+/* Dropdown icons */
+.my_menu_item i {
+    font-size: 1.2rem;
+    color: inherit;
+}
+
+/* Confirm Delete Page */
+#delete-account h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#delete-account p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#delete-account .btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    font-size: 1rem;
+}
+
+#delete-account .btn-secondary {
+    font-size: 1rem;
+}
+
+.dropdown-menu {
+    position: absolute; /* Ensure proper alignment */
+    right: 0; /* Align dropdown to the right of its parent */
+    left: auto; /* Prevent overflow on the left */
+    max-width: 300px; /* Optional: limit the width */
+    word-wrap: break-word; /* Handle long text gracefully */
+    overflow-wrap: anywhere; /* Ensure text stays inside the dropdown */
+    z-index: 1050; /* Ensure the dropdown is above other elements */
+}
+
+/* Prevent the dropdown from overflowing vertically */
+.dropdown-menu-end {
+    max-height: 300px; /* Set a max height */
+    overflow-y: auto; /* Enable scrolling for long content */
+}
+
+/* Add some spacing for better visuals */
+.dropdown-item {
+    padding: 10px 15px; /* Adjust as per your design */
 }

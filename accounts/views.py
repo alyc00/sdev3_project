@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.models import Group
 from .forms import CustomUserCreationForm
 from .models import CustomUser, Profile
+from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import ProfileForm
 
 class SignUpView(CreateView):
     form_class = CustomUserCreationForm
@@ -38,6 +40,25 @@ class ProfileEditView(UpdateView):
         'fav_genre',
     ]
 
+# class ProfileEditView(UpdateView):
+#     model = Profile
+#     form_class = ProfileForm
+#     template_name = 'accounts/edit_profile.html'
+#     context_object_name = 'profile'
+#     # You can specify the success URL or let it default to the same page
+
+#     def get_success_url(self):
+#         # After saving, redirect to the profile page
+#         return reverse_lazy('profile', kwargs={'pk': self.object.pk})
+
 class ProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
+
+class DeleteAccountView(LoginRequiredMixin, DeleteView):
+    model = CustomUser
+    template_name = "registration/confirm_delete.html"
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
