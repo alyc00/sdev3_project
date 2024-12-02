@@ -37,6 +37,14 @@ def add_to_cart(request, product_id):
         cart_item.save()
     return redirect('cart:cart_detail')
 
+def clear_cart(request):
+    """Clear all items from the user's cart."""
+    try:
+        cart = Cart.objects.get(cart_id=_cart_id(request))
+        CartItem.objects.filter(cart=cart).delete()  # Delete all items in the cart
+    except Cart.DoesNotExist:
+        pass
+    return redirect('cart:cart_detail')  # Redirect to cart detail or another page
 
 def cart_detail(request, total=0, counter=0, cart_items=None):
     # voucher
@@ -150,14 +158,6 @@ def cart_remove(request, product_id):
         cart_item.delete()
     return redirect('cart:cart_detail')
 
-
-def clear_cart(request, product_id):  
-    cart = Cart.objects.get(cart_id=_cart_id(request))
-    product = get_object_or_404(Product, id=product_id)
-    cart_item = CartItem.objects.get(product=product, cart=cart)
-    cart_item.delete()
-    return redirect('cart:cart_detail')
-
 def cart_detail(request, total=0, counter=0, cart_items=None):
     # voucher
     discount = 0
@@ -180,7 +180,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
 
     stripe.api_key = settings.STRIPE_SECRET_KEY
     stripe_total = int(total * 100)
-    description = 'Product Store - New Order'  # Updated description
+    description = 'Product Store - New Order'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
     
     # Voucher handling
@@ -198,51 +198,40 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
 
     # Handle POST request for Stripe payments
     if request.method == 'POST':
-        print(request.POST)
         try:
             token = request.POST['stripeToken']
             email = request.POST['stripeEmail']
 
             customer = stripe.Customer.create(email=email, source=token)
             stripe.Charge.create(amount=stripe_total, currency="eur",
-                                 description=description, customer=customer.id)
+                                description=description, customer=customer.id)
 
-            # Creating the order
-            try:
-                order_details = Order.objects.create(
-                    token=token,
-                    total=new_total if voucher else total,
-                    emailAddress=email,
-                )
-                order_details.save()
+            # Create the order
+            order_details = Order.objects.create(
+                token=token,
+                total=new_total if voucher else total,
+                emailAddress=email,
+            )
+            if voucher:
+                order_details.voucher = voucher
+                order_details.discount = discount
+            order_details.save()
 
-                if voucher is not None:
-                    order_details.voucher = voucher
-                    order_details.discount = discount
-                order_details.save()
+            for order_item in cart_items:
+                OrderItem.objects.create(
+                    product=order_item.product.name,
+                    price=order_item.product.price,
+                    order=order_details
+                )       
 
-                for order_item in cart_items:
-                    ord_it = OrderItem.objects.create(
-                        product=order_item.product.name,
-                        price=order_item.product.price,
-                        order=order_details
-                    )
-                    clear_cart(request, order_item.product.id)
-                    if voucher is not None:
-                        discount = (ord_it.price * (voucher.discount / Decimal('100')))
-                        ord_it.price = (ord_it.price - discount)
-
-                    ord_it.save()
-
-                print('The order has been created')
-
-            except ObjectDoesNotExist:
-                pass
+        # Clear the cart and redirect to the home page
+            clear_cart(request)  # Clear all items from the cart
+            return redirect('home')  # Redirect to home page after order completion
 
         except stripe.error.CardError as stripeError:
             return stripeError
 
-    # Return context variables
+
     return render(request,
                   'cart.html',
                   {
@@ -258,3 +247,32 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                       'discount': discount,
                   }
                   )
+
+
+
+
+def checkout(request):
+    if request.method == 'POST':
+        # Process payment logic (e.g., Stripe or PayPal)
+
+        # Create a new order
+        order = Order.objects.create(
+            user=request.user,
+            total=calculate_cart_total(request),  # Replace with your cart total calculation
+        )
+
+        # Add items to the order
+        cart = get_cart_items(request)  # Replace with your cart retrieval logic
+        for item in cart:
+            OrderItem.objects.create(
+                order=order,
+                product=item['product'],  # Replace with your product field
+                quantity=item['quantity'],
+                price=item['price'],
+            )
+
+        # Clear the cart after checkout
+        clear_cart(request)
+
+        # Redirect to a success page
+        return redirect('orders:order_history')

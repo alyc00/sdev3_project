@@ -11,15 +11,8 @@
             <p class="lead">
                 Discover your favorite artists, albums, and tracks. From timeless classics to the latest hits, we’ve got something for every music lover.
             </p>
-            <a href="/shop" class="btn btn-lg" style="background-color: #3e5c76; color: white;">Shop Now</a>
+            <a href="{% url 'store:store' %}" class="btn btn-lg" style="background-color: #3e5c76; color: white;">Shop Now</a>
         </div>
-
-        <!-- Right Section: Image -->
-        {% comment %}
-        <div class="col-md-6">
-            <img src="{% static 'images/home-hero.jpg' %}" class="img-fluid rounded shadow-lg" alt="Music Store">
-        </div>
-        {% endcomment %}
     </div>
 
     <!-- Features Section -->
@@ -49,7 +42,7 @@
             <p class="lead" style="color: #6b7280;">
                 Browse our exclusive collection of records and albums to find the perfect soundtrack for your life.
             </p>
-            <a href="/shop" class="btn btn-lg" style="background-color: #3e5c76; color: white;">Browse the Shop</a>
+            <a href="{% url 'store:store' %}" class="btn btn-lg" style="background-color: #3e5c76; color: white;">Browse the Shop</a>
         </div>
     </div>
 </div>

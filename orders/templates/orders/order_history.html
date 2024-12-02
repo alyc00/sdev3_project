@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Order History</h2>
+    <hr>
+    {% if orders %}
+        <ul class="list-group">
+            {% for order in orders %}
+                <li class="list-group-item">
+                    <a href="{% url 'orders:order_detail' order.id %}">
+                        Order #{{ order.id }} - Placed on {{ order.created_at|date:"F j, Y, g:i a" }}
+                    </a>
+                    <span class="float-end">
+                        Total: ${{ order.total }}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have no orders in your history.</p>
+    {% endif %}
+</div>
+{% endblock %}

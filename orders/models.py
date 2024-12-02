@@ -1,9 +1,15 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from vouchers.models import Voucher
+from django.conf import settings
 
 
 class Order(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,  # Referencing the user model
+        on_delete=models.CASCADE,
+        null=True,  # Allow null temporarily to handle existing orders
+    )
     token = models.CharField(max_length=255, blank=True)
     total = models.DecimalField(
         max_digits=10,
@@ -15,6 +21,7 @@ class Order(models.Model):
         blank=True,
         verbose_name='Email Address'
     )
+
     created = models.DateTimeField(auto_now_add=True)
     billingName = models.CharField(max_length=255, blank=True)
 
@@ -52,7 +59,6 @@ class OrderItem(models.Model):
         Order,
         on_delete=models.CASCADE
     )
-
     class Meta:
         db_table = 'OrderItem'
     
