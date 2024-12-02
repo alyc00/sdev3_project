@@ -22,5 +22,6 @@ urlpatterns = [
     # path("__reload__/", include("django_browser_reload.urls")),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
-    path('', include('pages.urls'))
+    path('', include('pages.urls')),
+    path('store/', include('store.urls')),
 ]

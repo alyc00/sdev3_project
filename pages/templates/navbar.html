@@ -1,6 +1,5 @@
 {% load static %}
-
-<!-- Bootstrap Navbar -->
+{% load static %}
 <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #1d2d44;">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/">Music Store</a>
@@ -17,7 +16,7 @@
                     <a class="nav-link text-white" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/shop">Shop</a>
+                    <a class="nav-link text-white" href="{% url 'store:store' %}">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="/contact">Contact</a>
@@ -29,7 +28,8 @@
                 </li>
                 {% if user.is_authenticated and user.profile %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-white dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="profileDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-circle"></i> {{ user.username }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
@@ -50,31 +50,10 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'login' %}">
-                        Login
-                    </a>
+                    <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>
         </div>
     </div>
 </nav>
-
-<!-- Custom CSS for Hover Dropdown -->
-<style>
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-
-    /* Ensure dropdown does not overflow the navbar */
-    .dropdown-menu {
-        max-height: 300px; /* Set a max height for the dropdown */
-        overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
-        z-index: 1000; /* Ensure dropdown appears above other elements */
-    }
-
-    /* Optional: Add some padding to the dropdown items */
-    .dropdown-item {
-        padding: 10px 15px; /* Adjust padding as needed */
-    }
-</style>
