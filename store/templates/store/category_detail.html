@@ -20,7 +20,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for prod in products %}
         <div class="col">
-            <div class="card h-100 shadow-sm">
+            <div class="card w-100 h-100 shadow-sm">
                 {% if prod.image %}
                 <img src="{{ prod.image.url }}" alt="{{ prod.name }}" class="card-img-top" style="height: 200px; object-fit: cover;">
                 {% else %}

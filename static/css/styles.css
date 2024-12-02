@@ -181,3 +181,8 @@ nav ul li a {
 .card-button:hover {
     background-color: #555;
 }
+/* Restore hover functionality */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #f0ad4e !important; /* You can adjust the hover color */
+    background-color: rgba(255, 255, 255, 0.1);
+}

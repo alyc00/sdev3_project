@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'cart',
     'search',
     'pages',
+    'vouchers',
+    'orders',
+    'stripe',
 
     'crispy_forms',
     'crispy_bootstrap5',
@@ -145,5 +148,8 @@ LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'  
 MEDIA_ROOT = BASE_DIR / 'media'
+
+STRIPE_SECRET_KEY = ''
+STRIPE_PUBLISHABLE_KEY = ''

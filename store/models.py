@@ -12,10 +12,12 @@ class Category(models.Model):
     image = models.ImageField(upload_to='media/categories', blank=True) 
     
     class Meta:
-        ordering = ('name',) # sort results by name field ascending when quering database
+        ordering = ('name',) 
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'  # Plural name for the Category model
     
     def get_absolute_url(self):
-        return reverse('store:books_by_genre', args=[self.id])
+        return reverse('store:all_product', args=[self.id])
 
     def __str__(self):
         return self.name
@@ -29,14 +31,11 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='product_images/', blank=True, null=True)
+    image = models.ImageField(upload_to='media/products', blank=True, null=True)
     available = models.BooleanField(default=True)
     
     class Meta:
         ordering = ('name',)   
-         
-    def get_absolute_url(self):
-        return reverse('store:book_detail', args=[self.genre.id, self.id])
 
     def __str__(self):
         return self.name
