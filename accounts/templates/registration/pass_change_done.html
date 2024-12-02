@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Password Change Done
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="text-center">
+        <h1 class="my_title text-center my-5">Password changed!</h1>
+        <p>Your password has been changed successfully. Remember to keep your password safe.</p>
+
+        <a href="{% url 'home' %}">
+            <button class="btn btn-success mb-5">Back to Home Page</button>
+        </a>
+    </div>
+</div>
+{% endblock %}
